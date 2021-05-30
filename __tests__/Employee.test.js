@@ -11,4 +11,25 @@ test('creates an employee object', () => {
 });
 
 // test name
-test()
+test('creates a new employee name', () => {
+    const employee = new Employee('Fred', '404', 'fredmcwilliams92@gmail.com');
+    expect(employee.getName()).toBe('Fred');
+});
+
+// test ID
+test('test the users ID', () => {
+    const employee = new Employee('Fred', '404', 'fredmcwilliams92@gmail.com');
+    expect(employee.getId()).toBe('404');
+});
+
+// tests for the users email
+test('test for the users email', () => {
+    const employee = new Employee('Fred', '404', 'fredmcwilliams92@gmail.com');
+    expect(employee.getEmail()).toBe('fredmcwilliams92@gmail.com');
+});
+
+// test role
+test('retreive the users role', () => {
+    const employee = new Employee('Fred', '404', 'fredmcwilliams92@gmail.com');
+    expect(employee.getRole()).toBe('Employee');
+});
