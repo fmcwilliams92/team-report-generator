@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 
 // linking other files
-const {Employee, Intern, Engineer, Manager} = require('./lib/index')
+const {Employee, Intern, Engineer, Manager} = require('./lib/Index')
 
 // list of questions
 const questions = [
@@ -45,11 +45,15 @@ const questions = [
             }
         }
     }
-].then(answers => {
-    console.log(answers);
-});
+]
 
 // function to prompt questions
+function addEmployee() {
+    inquirer.prompt(questions)
+    .then(function(answers) {
+        console.log(answers)
+    })
+};
 
 // functions to create employees
 
@@ -58,3 +62,5 @@ const questions = [
 // function to create engineers
 
 // function to create the HTML page
+
+addEmployee();

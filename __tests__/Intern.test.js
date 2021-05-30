@@ -1,7 +1,5 @@
 const { expect } = require('@jest/globals');
 const { test } = require('jest-circus');
-const intern = require('../index');
+const Intern = require('../lib/Intern');
 
-test('checking to see is this is an intern', () => {
-    expect(sum(1,2)).toBe(3);
-});
+// test();
