@@ -12,6 +12,7 @@ class Intern {
     getName();
     getId();
     getEmail();
+    getSchool();
 };
 
 class Employee {
@@ -20,6 +21,9 @@ class Employee {
         this.id = id;
         this.email = email;
     }
+    getName();
+    getId();
+    getEmail();
 };
 
 class Engineer {
@@ -29,6 +33,10 @@ class Engineer {
         this.email = email;
         this.github = github;
     }
+    getName();
+    getId();
+    getEmail();
+    getGitHub();
 };
 
 class Manager {
@@ -38,6 +46,10 @@ class Manager {
         this.email = email;
         this.officeNumber = officeNumber;
     }
+    getName();
+    getId();
+    getEmail();
+    getOfficeNumber();
 };
 
 const questions = [

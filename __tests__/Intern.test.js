@@ -1,2 +1,4 @@
-const checkIfIntern = require('../lib/random.js');
+const { test } = require('jest-circus');
+const intern = require('../index');
 
+test();

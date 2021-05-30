@@ -1,6 +1,29 @@
 {
   "dependencies": {
-    "inquirer": "^8.1.0",
+    "inquirer": "^8.1.0"
+  },
+  "name": "team-report-generator",
+  "description": "AS A manager I WANT to generate a webpage that displays my team's basic info SO THAT I have quick access to their emails and GitHub profiles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
     "jest": "^27.0.3"
-  }
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmcwilliams92/team-report-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fmcwilliams92/team-report-generator/issues"
+  },
+  "homepage": "https://github.com/fmcwilliams92/team-report-generator#readme"
 }
