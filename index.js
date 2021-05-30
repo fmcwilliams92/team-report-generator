@@ -44,8 +44,35 @@ const questions = [
             return true;
             }
         }
+    },
+    // verify the role of the user
+    {
+        type: 'list',
+        name: 'role',
+        message: ' Please specify your role within the company!',
+        default: 'Role',
+        choices: ['Intern', 'Engineer', 'Manager']
+    },
+    // additional questions depending on which role the user chose
+    {
+        type: 'input',
+        name: 'GitHub',
+        message: 'Please enter your GitHub username',
+        when: (input) => input.role === 'Engineer'
+    },
+    {
+        type: 'input',
+        name: 'school',
+        message: 'Please enter your School name!',
+        when: (input) => input.role === 'Intern'
+    },
+    {
+        type: 'input',
+        name: 'officeNumber',
+        message: 'Please enter your office number!',
+        when: (input) => input.role === 'Manager'
     }
-]
+];
 
 // function to prompt questions
 function addEmployee() {
