@@ -9,10 +9,10 @@ class Intern {
         this.email = email;
         this.school = school;
     }
-    getName();
-    getId();
-    getEmail();
-    getSchool();
+    // getName();
+    // getId();
+    // getEmail();
+    // getSchool();
 };
 
 class Employee {
@@ -21,9 +21,9 @@ class Employee {
         this.id = id;
         this.email = email;
     }
-    getName();
-    getId();
-    getEmail();
+    // getName();
+    // getId();
+    // getEmail();
 };
 
 class Engineer {
@@ -33,10 +33,10 @@ class Engineer {
         this.email = email;
         this.github = github;
     }
-    getName();
-    getId();
-    getEmail();
-    getGitHub();
+    // getName();
+    // getId();
+    // getEmail();
+    // getGitHub();
 };
 
 class Manager {
@@ -46,10 +46,10 @@ class Manager {
         this.email = email;
         this.officeNumber = officeNumber;
     }
-    getName();
-    getId();
-    getEmail();
-    getOfficeNumber();
+    // getName();
+    // getId();
+    // getEmail();
+    // getOfficeNumber();
 };
 
 const questions = [

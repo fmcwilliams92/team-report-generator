@@ -1,4 +1,4 @@
-const { test } = require('jest-circus');
-const manager = require('../index.js');
+// const { test } = require('jest-circus');
+// const manager = require('../index.js');
 
-test();
+// test();
