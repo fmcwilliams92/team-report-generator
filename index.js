@@ -1,57 +1,10 @@
 // requierment when using inquierer
 const inquirer = require('inquirer');
 
-// Classes and functions for each class
-class Intern {
-    constructor(name, id, email, school) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.school = school;
-    }
-    // getName();
-    // getId();
-    // getEmail();
-    // getSchool();
-};
+// linking other files
+const {Employee, Intern, Engineer, Manager} = require('./lib/index')
 
-class Employee {
-    constructor(name, id, email) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-    }
-    // getName();
-    // getId();
-    // getEmail();
-};
-
-class Engineer {
-    constructor(name, id, email, github) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.github = github;
-    }
-    // getName();
-    // getId();
-    // getEmail();
-    // getGitHub();
-};
-
-class Manager {
-    constructor(name, id, email, officeNumber) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.officeNumber = officeNumber;
-    }
-    // getName();
-    // getId();
-    // getEmail();
-    // getOfficeNumber();
-};
-
+// list of questions
 const questions = [
     {
         type: 'input',
@@ -91,7 +44,17 @@ const questions = [
             return true;
             }
         }
-    },
-];
+    }
+].then(answers => {
+    console.log(answers);
+});
 
-// prompt the questions to collect the user data
+// function to prompt questions
+
+// functions to create employees
+
+// function to create interns
+
+// function to create engineers
+
+// function to create the HTML page
