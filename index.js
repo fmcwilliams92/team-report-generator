@@ -1,5 +1,8 @@
-// requierment when using inquierer
+// document requirements
 const inquirer = require('inquirer');
+const http = require('http');
+const fs = require('fs');
+const port = 3001;
 
 // linking other files
 const {Employee, Intern, Engineer, Manager} = require('./lib/Index')
@@ -9,7 +12,7 @@ const questions = [
     {
         type: 'input',
         name: 'employeeName',
-        message: 'What is your name? (Required)',
+        message: 'What is your name?',
         default: 'Name',
         validate: function(answer) {
             if (answer < 1 ) {
@@ -22,7 +25,7 @@ const questions = [
     {
         type: 'input',
         name: 'id',
-        message: 'What is your ID? (Required)',
+        message: 'What is your ID?',
         default: 'ID',
         validate: function(answer) {
             if (answer < 1 ) {
@@ -78,7 +81,7 @@ const questions = [
 function addEmployee() {
     inquirer.prompt(questions)
     .then(function(answers) {
-        console.log(answers)
+    console.log(answers);
     })
 };
 
@@ -89,5 +92,25 @@ function addEmployee() {
 // function to create engineers
 
 // function to create the HTML page
+const server = http.createServer(function(req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    fs.readFile('index.html', function(error, data) {
+        if (error) {
+            res.writeHead(404);
+            res.write('Error: File not found')
+        } else {
+            res.write(answers)
+        }
+        res.end();
+    })
+});
+
+server.listen(port, function(error) {
+    if (error) {
+        console.log('Something went wrong!', error)
+    } else {
+        console.log('Server is listening on port ' + port)
+    }
+});
 
 addEmployee();
